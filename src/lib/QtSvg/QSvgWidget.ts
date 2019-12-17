@@ -11,7 +11,7 @@ export class QSvgWidget extends NodeWidget {
         } else if (parent) {
             native = new addon.QSvgWidget(parent.native);
         } else {
-            throw new Error('Wrong number of arguments');
+            native = new addon.QSvgWidget();
         }
         super(native);
         this.native = native;

@@ -41,11 +41,9 @@ QSvgWidgetWrap::QSvgWidgetWrap(const Napi::CallbackInfo& info)
     Napi::Object parentObject = info[0].As<Napi::Object>();
     QWidgetWrap* parentWidgetWrap =
         Napi::ObjectWrap<QWidgetWrap>::Unwrap(parentObject);
-
     this->instance = new NSvgWidget(parentWidgetWrap->getInternalInstance());
   } else {
-    Napi::TypeError::New(env, "Wrong number of arguments")
-        .ThrowAsJavaScriptException();
+    this->instance = new NSvgWidget(nullptr);
   }
 
   auto flexNode = this->getInternalInstance()->getFlexNode();
