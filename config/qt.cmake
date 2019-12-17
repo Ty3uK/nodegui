@@ -30,11 +30,13 @@ function(AddQtSupport addonName)
             "${QT_HOME_DIR}/lib/QtCore.framework/Versions/5/Headers"
             "${QT_HOME_DIR}/lib/QtGui.framework/Versions/5/Headers"
             "${QT_HOME_DIR}/lib/QtWidgets.framework/Versions/5/Headers"
+            "${QT_HOME_DIR}/lib/QtSvg.Framework/Versions/5/Headers"
         )
         target_link_libraries(${addonName} PRIVATE
             "${QT_HOME_DIR}/lib/QtCore.framework/Versions/5/QtCore"
             "${QT_HOME_DIR}/lib/QtGui.framework/Versions/5/QtGui"
             "${QT_HOME_DIR}/lib/QtWidgets.framework/Versions/5/QtWidgets"
+            "${QT_HOME_DIR}/lib/QtSvg.framework/Versions/5/QtSvg"
         )
     endif()
 
@@ -46,11 +48,13 @@ function(AddQtSupport addonName)
             "${QT_HOME_DIR}\\include\\QtCore"
             "${QT_HOME_DIR}\\include\\QtGui"
             "${QT_HOME_DIR}\\include\\QtWidgets"
+            "${QT_HOME_DIR}\\include\\QtSvg"
         )
         target_link_libraries(${addonName} PRIVATE
             "${QT_HOME_DIR}\\lib\\Qt5Core.lib"
             "${QT_HOME_DIR}\\lib\\Qt5Gui.lib"
             "${QT_HOME_DIR}\\lib\\Qt5Widgets.lib"
+            "${QT_HOME_DIR}\\lib\\Qt5Svg.lib"
         )
     endif()
 
@@ -65,11 +69,13 @@ function(AddQtSupport addonName)
             "${QT_HOME_DIR}/include/QtCore"
             "${QT_HOME_DIR}/include/QtGui"
             "${QT_HOME_DIR}/include/QtWidgets"
+            "${QT_HOME_DIR}/include/QtSvg"
         )
         target_link_libraries(${addonName} PRIVATE
             "${QT_HOME_DIR}/lib/libQt5Core.so"
             "${QT_HOME_DIR}/lib/libQt5Gui.so"
             "${QT_HOME_DIR}/lib/libQt5Widgets.so"
+            "${QT_HOME_DIR}/lib/libQt5Svg.so"
         )
     endif()    
     

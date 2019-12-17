@@ -67,3 +67,5 @@ export { FlexLayout } from './lib/core/FlexLayout';
 export { StyleSheet } from './lib/core/Style/StyleSheet';
 export { NativeElement, Component } from './lib/core/Component';
 export { checkIfNativeElement } from './lib/utils/helpers';
+// SVG
+export { QSvgWidget } from './lib/QtSvg/QSvgWidget';
