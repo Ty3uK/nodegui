@@ -4,10 +4,10 @@ import { NodeWidget } from '../QtWidgets/QWidget';
 
 export class QSvgWidget extends NodeWidget {
     native: NativeElement;
-    constructor(file?: string, parent?: NodeWidget) {
+    constructor(fileOrContent?: string | Buffer, parent?: NodeWidget) {
         let native;
-        if (file && parent) {
-            native = new addon.QSvgWidget(file, parent.native);
+        if (fileOrContent && parent) {
+            native = new addon.QSvgWidget(fileOrContent, parent.native);
         } else if (parent) {
             native = new addon.QSvgWidget(parent.native);
         } else {
